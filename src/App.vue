@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <router-link to="/top">トップ</router-link>
-    <router-link to="/news">ニュース</router-link>
-    <router-link to="/category">カテゴリ一覧</router-link>
+    <router-link to="/">Top</router-link> | 
+    <router-link to="/news">News</router-link> | 
+    <router-link to="/category">Category</router-link>
     <router-view></router-view>
   </div>
 </template>
