@@ -20,7 +20,7 @@ export default new Router({
     {
       path: '/category',
       component: {
-        template: '<h1>Category Page!</h1>'
+        template: '<h1>Category Page!</h1><p>Empty</p>'
       }
     }
   ]
