@@ -35,6 +35,9 @@ export default {
   },
   methods: {
     news_showad: function (event) {
+      var zmt_mtag;
+      var p30657_1;
+      var p30657_2;
       zd_get_placements = function() {
         zmt_mtag = zmt_get_tag(2117,"30657");
         zmt_mtag.zmt_set_charset("utf-8");

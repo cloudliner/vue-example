@@ -42,6 +42,11 @@ export default {
   },
   methods: {
     top_showad: function (event) {
+      var zmt_mtag;
+      var p456562_1;
+      var p456562_2;
+      var p456562_3;
+      
       zd_get_placements = function() {
         zmt_mtag = zmt_get_tag(2117,"456562");
         zmt_mtag.zmt_set_charset("utf-8");
