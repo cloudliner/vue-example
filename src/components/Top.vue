@@ -41,7 +41,7 @@ export default {
     }
   },
   methods: {
-    top_showad: function (event) {
+    top_showad: function () {
       // 変数定義
       var zmt_mtag;
       var p456562_1;
@@ -49,8 +49,8 @@ export default {
       var p456562_3;
       
       // 広告枠定義
-      zd_get_placements = function() {
-        zmt_mtag = zmt_get_tag(2117,"456562");
+      window.zd_get_placements = function() {
+        zmt_mtag = window.zmt_get_tag(2117,"456562");
         zmt_mtag.zmt_set_charset("utf-8");
         p456562_1 = zmt_mtag.zmt_get_placement("zt_456562_1", "456562", "1" , "999" , "60" , "118" ,"1200", "630");
         p456562_2 = zmt_mtag.zmt_get_placement("zt_456562_2", "456562", "2" , "999" , "29" , "118" ,"1200", "630");
@@ -62,8 +62,8 @@ export default {
 
       // JS呼び出し設定
       var script = document.createElement("script");
-      script.setAttribute("src", "http://s.f1.impact-ad.jp/client/xp1/fmos.js");
-      document.getElementsByTagName("head")[0].appendChild(script);
+      script.setAttribute("src", "https://s.f1.impact-ad.jp/sclient/tt3/fmos.js");
+      document.getElementById("dac_ad_script_insert_point").appendChild(script);
 
       // 広告表示設定
       if(typeof zmt_mtag !='undefined' && typeof zmt_mtag.zmt_render_placement !='undefined') {
