@@ -43,17 +43,10 @@ export default {
 
       // 広告枠定義
       window.zd_get_placements = function() {
-        zmt_mtag = window.zmt_get_tag(2117,"30657");
+        zmt_mtag = window.zmt_get_tag(2117, ad_slot_id);
         zmt_mtag.zmt_set_charset("utf-8");
         window['p' + ad_slot_id + '_1'] = zmt_mtag.zmt_get_placement('zt_' + ad_slot_id + '_1', ad_slot_id, "1" , "999" , "60" , "118" ,"1200", "630");
         window['p' + ad_slot_id + '_2'] = zmt_mtag.zmt_get_placement('zt_' + ad_slot_id + '_2', ad_slot_id, "2" , "999" , "60" , "118" ,"1200", "630");
-
-        // レスポンシブ対応
-        // p30657_1.zmt_add_MultiSize(768,768,60);
-        // p30657_1.zmt_add_MultiSize(1024,1024,29);
-
-        // p30657_2.zmt_add_MultiSize(768,768,60);
-        // p30657_2.zmt_add_MultiSize(1024,1024,29);
 
         zmt_mtag.zmt_set_async();
         zmt_mtag.zmt_load(zmt_mtag);
