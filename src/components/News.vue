@@ -55,6 +55,7 @@ export default {
   data () {
     return {
       msg: 'News Page!',
+      // 広告枠のセットの id の配列
       ad_slot_array: [(Math.floor(Math.random() * 1000000)),
                       (Math.floor(Math.random() * 1000000)),
                       (Math.floor(Math.random() * 1000000))]
@@ -69,6 +70,7 @@ export default {
 
       // 広告枠定義
       window.zd_get_placements = function() {
+        // 広告枠のセット単位でループする
         ad_slot_array.forEach(function(ad_slot_id) {
           zmt_mtag = window.zmt_get_tag(2117, ad_slot_id);
           zmt_mtag.zmt_set_charset("utf-8");
